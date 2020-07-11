@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/materialup.appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/main.collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|snap">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbarSingel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray"
+                        android:theme="?attr/actionBarTheme"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/flashBack"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="5dp"
+                        android:onClick="GoBack"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_falsh_back"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/toolbarSingel"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/share_img"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="36dp"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_share"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="0dp"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_gift"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/share_img"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_bookmark"
+                        android:padding="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:layout_constraintVertical_weight="1"
+                        app:layout_scrollFlags="scroll|enterAlways|snap">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginBottom="78dp"
+                            android:background="@color/gray" />
+
+                        <ImageView
+                            android:id="@+id/img_book_single"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="9dp"
+                            android:layout_marginRight="9dp"
+                            android:layout_marginBottom="6dp"
+                            tools:src="@drawable/mywar_action" />
+
+                        <TextView
+                            android:id="@+id/book_name_single"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="51dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_toStartOf="@+id/img_book_single"
+                            android:layout_toLeftOf="@+id/img_book_single"
+                            android:fontFamily="@font/iran_yekan_mobile_bold"
+                            tools:text="نبرد من (آدولف هیتلر)"
+                            android:textColor="@color/book_name_singel"
+                            android:textSize="14sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/book_writer_singel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/book_name_single"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_toStartOf="@+id/img_book_single"
+                            android:layout_toLeftOf="@+id/img_book_single"
+                            android:fontFamily="@font/iran_yekan_mobile_bold"
+                            tools:text="فرشته اکبرپور"
+                            android:textColor="@color/book_writer_singel_color"
+                            android:textSize="12sp"
+                            tools:layout_editor_absoluteX="202dp"
+                            tools:layout_editor_absoluteY="85dp" />
+
+                        <RatingBar
+
+                            android:id="@+id/book_raiting_singel"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/book_writer_singel"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_toStartOf="@+id/img_book_single"
+                            android:layout_toLeftOf="@+id/img_book_single"
+                            android:outlineAmbientShadowColor="#417583"
+                            android:theme="@style/RatingBar" />
+
+                        <TextView
+                            android:id="@+id/bokk_rate_num_singel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/book_writer_singel"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="9dp"
+                            android:layout_marginRight="9dp"
+                            android:layout_toStartOf="@+id/book_raiting_singel"
+                            android:layout_toLeftOf="@+id/book_raiting_singel"
+                            android:fontFamily="@font/iran_yekan_mobile_bold"
+                            android:text="4.2"
+                            android:textColor="@color/button_color_singel"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/txt_book_price_singel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/book_raiting_singel"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_toStartOf="@+id/img_book_single"
+                            android:layout_toLeftOf="@+id/img_book_single"
+                            android:fontFamily="@font/iran_yekan_mobile_bold"
+                            tools:text="25,000"
+                            android:textColor="@color/button_color_singel"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/textprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/book_raiting_singel"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toStartOf="@+id/txt_book_price_singel"
+                            android:layout_toLeftOf="@+id/txt_book_price_singel"
+                            android:fontFamily="@font/iran_yekan_mobile_bold"
+                            android:text="تومان"
+                            android:textColor="@color/button_color_singel"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_book_price_singel"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="3dp"
+                            android:layout_marginRight="3dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_toStartOf="@+id/img_book_single"
+                            android:layout_toLeftOf="@+id/img_book_single"
+                            android:fontFamily="@font/iran_yekan_mobile_bold"
+                            android:text="گزارش مشکل در کتاب"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="10sp" />
+
+
+                    </RelativeLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/materialup.title_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp">
+                    ​<RelativeLayout
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/boarder_button"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent">
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="match_parent"
+
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/txtread"
+                                android:textStyle="bold"
+                                android:textColor="#000"
+android:fontFamily="@font/iran_yekan_mobile_bold"
+                                android:textSize="15dp"
+                                android:gravity="center"
+                                android:text="خواندن نمونه"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+                </RelativeLayout>
+                    ​<RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button"
+                    android:layout_height="match_parent">
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txt_save"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+android:fontFamily="@font/iran_yekan_mobile_bold"
+                            android:textSize="15dp"
+                            android:gravity="center"
+                            android:text="خواندن نمونه"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            ​
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        ​​
+
+        ​
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout_singel"
+            android:layout_width="match_parent"
+            app:tabIndicatorColor="@color/button_color_singel"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabSelectedTextColor="#000"
+            app:tabTextColor="#979797">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+
+
+                android:layout_height="wrap_content"
+                android:icon="@drawable/comment"
+                android:text="نطرات کاربران"
+                app:tabTextAppearance="@style/AppTheme.TabLayout" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/book1"
+                android:text="درباره کتاب"
+                app:tabTextColor="#000" />
+        </com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    ​ ​
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/tab_singel_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    ​
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
